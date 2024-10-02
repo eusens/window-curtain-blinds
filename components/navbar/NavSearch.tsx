@@ -6,12 +6,13 @@ import { useState, useEffect } from 'react';
 
 function NavSearch() {
   const searchParams = useSearchParams();
-
   const pathname = usePathname();
   const { replace } = useRouter();
+
   const [search, setSearch] = useState(
     searchParams.get('search')?.toString() || ''
   );
+
   const handleSearch = useDebouncedCallback((value: string) => {
     const params = new URLSearchParams(searchParams);
     if (value) {
@@ -21,15 +22,20 @@ function NavSearch() {
     }
     replace(`${pathname}?${params.toString()}`);
   }, 300);
+
+  // Extract the 'search' query param into a variable for better static analysis
+  const searchQuery = searchParams.get('search');
+
   useEffect(() => {
-    if (!searchParams.get('search')) {
+    if (!searchQuery) {
       setSearch('');
     }
-  }, [searchParams.get('search')]);
+  }, [searchQuery, searchParams]); // Add 'searchParams' and 'searchQuery' to the dependency array
+
   return (
     <Input
       type='search'
-      placeholder='find a property...'
+      placeholder='find a product...'
       className='max-w-xs dark:bg-muted '
       onChange={(e) => {
         setSearch(e.target.value);
@@ -39,4 +45,5 @@ function NavSearch() {
     />
   );
 }
+
 export default NavSearch;
