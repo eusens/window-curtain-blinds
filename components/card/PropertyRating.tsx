@@ -1,6 +1,7 @@
 import { FaStar } from 'react-icons/fa';
 
 async function PropertyRating({
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   propertyId,
   inPage,
 }: {

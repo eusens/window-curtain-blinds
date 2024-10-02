@@ -1,5 +1,6 @@
 import { Label } from '@/components/ui/label';
 import { Input } from '../ui/input';
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 import { Prisma } from '@prisma/client';
 
 // const name = Prisma.PropertyScalarFieldEnum.price
