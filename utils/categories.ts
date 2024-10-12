@@ -14,7 +14,7 @@ type Category = {
 };
 
 export type CategoryLabel =
-  | 'cabin'
+  | 'ABB'
   | 'tent'
   | 'airstream'
   | 'cottage'
@@ -27,7 +27,7 @@ export type CategoryLabel =
 
 export const categories: Category[] = [
   {
-    label: 'cabin',
+    label: 'ABB',
     icon: MdCabin,
   },
   {

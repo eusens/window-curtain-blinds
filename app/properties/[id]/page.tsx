@@ -10,7 +10,7 @@ import PropertyDetails from '@/components/properties/PropertyDetails';
 import UserInfo from '@/components/properties/UserInfo';
 import Description from '@/components/properties/Description';
 import { Separator } from '@/components/ui/separator';
-import Amenities from '@/components/properties/Amenities';
+// import Amenities from '@/components/properties/Amenities';
 import dynamic from 'next/dynamic';
 import { Skeleton } from '@/components/ui/skeleton';
 
@@ -28,7 +28,7 @@ async function PropertyDetailsPage({ params }: { params: { id: string } }) {
   const { baths, bedrooms, beds, guests } = property;
   const details = { baths, bedrooms, beds, guests };
   const firstName = property.profile.firstName;
-const profileImage = property.profile.profileImage;
+  const profileImage = property.profile.profileImage;
   return (
     <section>
       <BreadCrumbs name={property.name} />
@@ -47,11 +47,11 @@ const profileImage = property.profile.profileImage;
         <h1 className='text-xl font-bold'>{property.name}</h1>
         <PropertyRating inPage propertyId={property.id} />
       </div>
-      <PropertyDetails details={details} />
-      <UserInfo profile={{ firstName, profileImage }} />
+      {/* <PropertyDetails details={details} /> */}
+      {/* <UserInfo profile={{ firstName, profileImage }} /> */}
       <Separator className='mt-4' />
       <Description description={property.description} />
-      <Amenities amenities={property.amenities} />
+      {/* <Amenities amenities={property.amenities} /> */}
       <DynamicMap countryCode={property.country} />
     </div>
     <div className='lg:col-span-4 flex flex-col items-center'>

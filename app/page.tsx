@@ -1,5 +1,6 @@
 import LoadingCards from '@/components/card/LoadingCards';
 import CategoriesList from '@/components/home/CategoriesList';
+import Pagination from '@/components/home/Pagination';
 import PropertiesContainer from '@/components/home/PropertiesContainer';
 import { Suspense } from 'react';
 function HomePage({
@@ -18,7 +19,7 @@ function HomePage({
           category={searchParams.category}
           search={searchParams.search}
         />
-      </Suspense>
+        </Suspense>
     </section>
   );
 }
