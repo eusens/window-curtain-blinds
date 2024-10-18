@@ -39,7 +39,7 @@ async function PropertyDetailsPage({ params }: { params: { id: string } }) {
         <div className='flex items-center gap-x-4'>
           {/* share button */}
           <ShareButton name={property.name} propertyId={property.id} />
-          <FavoriteToggleButton propertyId={property.id} />
+          {/* <FavoriteToggleButton propertyId={property.id} /> */}
         </div>
       </header>
       <ImageContainer mainImage={property.image} name={property.name} />
