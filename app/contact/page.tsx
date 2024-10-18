@@ -1,9 +1,11 @@
-function Contact() {
+import Contact from '@/components/contact/Contact'
+
+function ContactPage() {
     return (
-        <h1 className='text-3xl'>
-          Contact Us
-        </h1>
+        <main >
+        <Contact />
+      </main>
       )
     }
 
-export default Contact
+export default ContactPage
