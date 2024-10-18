@@ -50,9 +50,9 @@ async function PropertyDetailsPage({ params }: { params: { id: string } }) {
         <PropertyRating inPage propertyId={property.id} />
       </div>
       {/* <PropertyDetails details={details} /> */}
-      <p className='text-lg font-semibold mt-4'>
-         {formatCurrency(property.price)} per piece
-      </p>
+      {/* <p className='text-lg font-semibold mt-4'> */}
+         {/* {formatCurrency(property.price)} per piece */}
+      {/* </p> */}
       {/* <UserInfo profile={{ firstName, profileImage }} /> */}
       <Separator className='mt-4' />
       <Description description={property.description} />
