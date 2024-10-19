@@ -239,18 +239,8 @@ export const toggleFavoriteAction = async (prevState: {
   }
 };
 
-interface Property {
-  id: string;
-  name: string;
-  tagline: string;
-  country: string;
-  price: number;
-  image: string;
-}
-
 export const fetchFavorites = async () => {
   const user = await getAuthUser();
-  
   const favorites = await db.favorite.findMany({
     where: {
       profileId: user.id,
@@ -268,9 +258,7 @@ export const fetchFavorites = async () => {
       },
     },
   });
-
-  // Use Property interface instead of 'any'
-  return favorites.map((favorite: { property: Property }) => favorite.property);
+  return favorites.map((favorite) => favorite.property);
 };
 
 export const fetchPropertyDetails = (id: string) => {
