@@ -14,7 +14,7 @@ const AboutUs: FC = () => {
          electrical control equipment for plant floor and facilities maintenance machinery.
         </p>
         <p className="text-lg text-gray-600 leading-8">
-          Over 130 brands and 500,000 spare parts in stock, 
+          Over 136 brands and 500,000 spare parts in stock, 
           including GE Fanuc, ABB, Siemens, Allen-Bradley, Schneider Electric and many others, 
           with the possibility of providing any new and obsolete parts at the best price. 
           All our spares are always covered by warranty. Our technicians and operators help 
