@@ -4,8 +4,8 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "npx prisma db push && npx prisma generate && node ./build/server.ts",
-    "start": "npx prisma generate && nodemon server.ts",
+    "build": "npx prisma generate && next build",
+    "start": "next start",
     "lint": "next lint"
   },
   "dependencies": {
