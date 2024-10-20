@@ -258,7 +258,7 @@ export const fetchFavorites = async () => {
       },
     },
   });
-  return favorites.map((favorite:any) => favorite.property);
+  return favorites.map((favorite) => favorite.property);
 };
 
 export const fetchPropertyDetails = (id: string) => {
