@@ -5,9 +5,8 @@
   "scripts": {
     "dev": "next dev",
     "build": "npx prisma generate && next build",
-    "start": "next start",
-    "lint": "next lint",
-    "vercel-build": "npx prisma generate && next build"
+    "start": "npx prisma generate && nodemon server.ts",
+    "lint": "next lint"
   },
   "dependencies": {
     "@clerk/nextjs": "^5.6.0",
