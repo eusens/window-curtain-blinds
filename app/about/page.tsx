@@ -24,7 +24,7 @@ const AboutUs: FC = () => {
         <div className="flex justify-center gap-4">
         <div className="w-1/3">
           <Image
-            src="/assets//images/image-1.svg" // replace with your image path
+            src="https://tvgxenufqrnhvhpnhglq.supabase.co/storage/v1/object/public/temp-home-away/project-2.jpeg" // replace with your image path
             alt="Image 1"
             width={400} // adjust width
             height={300} // adjust height
@@ -33,7 +33,7 @@ const AboutUs: FC = () => {
         </div>
         <div className="w-1/3">
           <Image
-            src="/assets//images/image-2.svg" // replace with your image path
+            src="https://tvgxenufqrnhvhpnhglq.supabase.co/storage/v1/object/public/temp-home-away/project-3.jpeg" // replace with your image path
             alt="Image 2"
             width={400} // adjust width
             height={300} // adjust height
@@ -42,7 +42,7 @@ const AboutUs: FC = () => {
         </div>
         <div className="w-1/3">
           <Image
-            src="/assets//images/image-3.svg" // replace with your image path
+            src="https://tvgxenufqrnhvhpnhglq.supabase.co/storage/v1/object/public/temp-home-away/project-1.jpeg" // replace with your image path
             alt="Image 3"
             width={400} // adjust width
             height={300} // adjust height
