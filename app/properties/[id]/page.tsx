@@ -15,6 +15,8 @@ import dynamic from 'next/dynamic';
 import { Skeleton } from '@/components/ui/skeleton';
 import ContactAction from '@/components/contact/ContactAction';
 import { formatCurrency } from '@/utils/format';
+import Head from 'next/head';
+import { Metadata } from 'next';
 
 const DynamicMap = dynamic(
   () => import('@/components/properties/PropertyMap'),
@@ -23,7 +25,20 @@ const DynamicMap = dynamic(
     loading: () => <Skeleton className='h-[400px] w-full' />,
   }
 );
+export async function generateMetadata({ params }: { params: { id: string } }): Promise<Metadata> {
+  const property = await fetchPropertyDetails(params.id);
+  if (!property) return { title: 'Property Not Found' };
 
+  return {
+    title: `${property.name} - Industrial Automation Components`,
+    description: `${property.category} - ${property.name}`,
+    openGraph: {
+      title: property.name,
+      description: `${property.category} - ${property.name}`,
+      images: [property.image],
+    },
+  };
+}
 async function PropertyDetailsPage({ params }: { params: { id: string } }) {
   const property = await fetchPropertyDetails(params.id);
   if (!property) redirect('/');
