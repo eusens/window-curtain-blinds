@@ -15,15 +15,15 @@ type Category = {
 
 export type CategoryLabel =
   | 'ABB'
-  | 'tent'
-  | 'airstream'
-  | 'cottage'
-  | 'container'
-  | 'caravan'
-  | 'tiny'
-  | 'magic'
-  | 'warehouse'
-  | 'lodge';
+  | 'AB'
+  | 'FESTO'
+  | 'BECKHOFF'
+  | 'MITSUBISHI'
+  | 'OMRON'
+  | 'PANASONIC'
+  | 'SIEMENS'
+  | 'SCHNEIDER'
+  | 'YASKAWA';
 
 export const categories: Category[] = [
   {
@@ -31,40 +31,40 @@ export const categories: Category[] = [
     icon: MdCabin,
   },
   {
-    label: 'airstream',
+    label: 'AB',
     icon: PiVan,
   },
   {
-    label: 'tent',
+    label: 'FESTO',
     icon: TbTent,
   },
   {
-    label: 'warehouse',
+    label: 'BECKHOFF',
     icon: PiWarehouse,
   },
   {
-    label: 'cottage',
+    label: 'MITSUBISHI',
     icon: TbBuildingCottage,
   },
   {
-    label: 'magic',
+    label: 'OMRON',
     icon: GiMushroomHouse,
   },
   {
-    label: 'container',
+    label: 'PANASONIC',
     icon: GoContainer,
   },
   {
-    label: 'caravan',
+    label: 'SIEMENS',
     icon: TbCaravan,
   },
 
   {
-    label: 'tiny',
+    label: 'SCHNEIDER',
     icon: PiLighthouse,
   },
   {
-    label: 'lodge',
+    label: 'YASKAWA',
     icon: GiWoodCabin,
   },
 ];
