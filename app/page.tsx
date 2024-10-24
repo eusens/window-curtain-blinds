@@ -1,13 +1,21 @@
 import LoadingCards from '@/components/card/LoadingCards';
 import CategoriesList from '@/components/home/CategoriesList';
-import Pagination from '@/components/home/Pagination';
+// import Pagination from '@/components/home/Pagination';
+import PaginationControls from '@/components/home/PaginationControls';
 import PropertiesContainer from '@/components/home/PropertiesContainer';
 import { Suspense } from 'react';
+import { fetchProperties } from '@/utils/actions';
+
+
 function HomePage({
   searchParams,
 }: {
-  searchParams: { category?: string; search?: string };
+  searchParams: { category?: string; search?: string;page?: string; per_page?: string  };
 }) {
+  const page = parseInt(searchParams.page as string) || 1;
+  const perPage = parseInt(searchParams.per_page as string) || 8;
+  const totalRecords = 5000;
+
   return (
     <section>
       <CategoriesList
@@ -20,6 +28,12 @@ function HomePage({
           search={searchParams.search}
         />
         </Suspense>
+        <div className="flex justify-center mt-4"> {/* Centering container */}
+        <PaginationControls
+          hasNextPage={totalRecords > page * perPage} // Check if there are more properties
+          hasPrevPage={page > 1}
+        />
+      </div>
     </section>
   );
 }

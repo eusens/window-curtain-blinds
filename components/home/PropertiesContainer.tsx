@@ -38,7 +38,7 @@ async function PropertiesContainer({
       
       {/* Pass isNext separately to Pagination */}
       {/* <Pagination pageNumber={page} isNext={isNext} /> */}
-      <Pagination isNext={isNext} />
+      {/* <Pagination pageNumber={page}  isNext={isNext} /> */}
     </>
   );
 }

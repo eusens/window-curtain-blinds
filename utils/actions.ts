@@ -158,16 +158,14 @@ export const createPropertyAction = async (
 export const fetchProperties = async ({
   search = '',
   category,
-  page = 1, // Add default page
-  pageSize = 12, // Default page size
+  page = 1,
+  perPage = 8,
 }: {
   search?: string;
   category?: string;
   page?: number;
-  pageSize?: number;
+  perPage?: number;
 }) => {
-  const offset = (page - 1) * pageSize;
-
   const properties = await db.property.findMany({
     where: {
       category,
@@ -184,14 +182,11 @@ export const fetchProperties = async ({
       image: true,
       price: true,
     },
-    skip: offset, // Pagination offset
-    take: pageSize, // Limit to page size
+    skip: (page - 1) * perPage, // Skip the number of items based on the current page
+    take: perPage, // Limit the number of items fetched
   });
-
-  return properties || []; // Ensure properties is always an array
+  return properties;
 };
-
-
 
 export const fetchFavoriteId = async ({
   propertyId,
