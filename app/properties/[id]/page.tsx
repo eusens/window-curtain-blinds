@@ -73,7 +73,7 @@ async function PropertyDetailsPage({ params }: { params: { id: string } }) {
       <Description description={property.description} />
       <ContactAction  />
       {/* <Amenities amenities={property.amenities} /> */}
-      <DynamicMap countryCode={property.country} />
+      {/* <DynamicMap countryCode={property.country} /> */}
     </div>
     <div className='lg:col-span-4 flex flex-col items-center'>
       {/* calendar */}
