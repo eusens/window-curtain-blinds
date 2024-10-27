@@ -8,6 +8,8 @@ import { PiWarehouse, PiLighthouse, PiVan } from 'react-icons/pi';
 
 import { GoContainer } from 'react-icons/go';
 
+import { GiDrippingHoney } from "react-icons/gi";
+
 type Category = {
   label: CategoryLabel;
   icon: IconType;
@@ -18,6 +20,7 @@ export type CategoryLabel =
   | 'AB'
   | 'FESTO'
   | 'BECKHOFF'
+  | 'HONEYWELL'
   | 'MITSUBISHI'
   | 'OMRON'
   | 'PANASONIC'
@@ -41,6 +44,10 @@ export const categories: Category[] = [
   {
     label: 'BECKHOFF',
     icon: PiWarehouse,
+  },
+  {
+    label: 'HONEYWELL',
+    icon: GiDrippingHoney,
   },
   {
     label: 'MITSUBISHI',
