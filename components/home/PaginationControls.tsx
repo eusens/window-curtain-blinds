@@ -16,8 +16,8 @@ const PaginationControls: FC<PaginationControlsProps> = ({
   const searchParams = useSearchParams()
 
   const page = parseInt(searchParams.get('page') ?? '1');
-  const per_page = parseInt(searchParams.get('per_page') ?? '8');
-  const totalRecords = 5000; // Assuming you have a fixed total record count
+  const per_page = parseInt(searchParams.get('per_page') ?? '88');
+  const totalRecords = 2501; // Assuming you have a fixed total record count
 
   return (
     <div className='flex gap-2'>

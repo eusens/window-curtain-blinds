@@ -159,7 +159,7 @@ export const fetchProperties = async ({
   search = '',
   category,
   page = 1,
-  perPage = 8,
+  perPage = 88,
 }: {
   search?: string;
   category?: string;

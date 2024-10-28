@@ -13,8 +13,8 @@ function HomePage({
   searchParams: { category?: string; search?: string;page?: string; per_page?: string  };
 }) {
   const page = parseInt(searchParams.page as string) || 1;
-  const perPage = parseInt(searchParams.per_page as string) || 8;
-  const totalRecords = 5000;
+  const perPage = parseInt(searchParams.per_page as string) || 88;
+  const totalRecords = 2501;
 
   return (
     <section>
