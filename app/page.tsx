@@ -14,7 +14,7 @@ function HomePage({
 }) {
   const page = parseInt(searchParams.page as string) || 1;
   const perPage = parseInt(searchParams.per_page as string) || 88;
-  const totalRecords = 2501;
+  const totalRecords = 12501;
 
   return (
     <section>
@@ -26,6 +26,9 @@ function HomePage({
         <PropertiesContainer
           category={searchParams.category}
           search={searchParams.search}
+          page={page} // Add page
+          perPage={perPage} // Add perPage
+
         />
         </Suspense>
         <div className="flex justify-center mt-4"> {/* Centering container */}

@@ -8,15 +8,18 @@ async function PropertiesContainer({
   category,
   search,
   page = 1,
+  perPage = 88,
 }: {
   category?: string;
   search?: string;
   page?: number;
+  perPage?:number;
 }) {
   const properties: PropertyCardProps[] = await fetchProperties({
     category,
     search,
-    page, // Pass the page number for pagination
+    page,
+    perPage, // Pass the page number for pagination
   });
 
   if (properties.length === 0) {
@@ -29,7 +32,7 @@ async function PropertiesContainer({
     );
   }
 
-  const isNext = properties.length === 12; // Check if there is a next page (based on page size)
+  // const isNext = properties.length === 12; // Check if there is a next page (based on page size)
 
   return (
     <>
