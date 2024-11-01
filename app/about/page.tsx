@@ -174,6 +174,9 @@ const AboutUs: FC = () => {
             />
           </div>
           {/* Add more team members here */}
+          <div className="text-center">
+          <a href="https://eusens.com">Eusens Technology</a>
+          </div>
         </div>
       </section>
 

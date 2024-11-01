@@ -27,12 +27,12 @@ function ContactPage() {
           <strong>Telephone:</strong> +86-133-1879-1068
         </p>
         <p className="mb-4">
-          <strong>Email:</strong> sales@eusens.com
+          <strong>Email:</strong> <a href="mailto:sales@newsinoenergy.com">sales@newsinoenergy.com</a>
         </p>
         <p className="mb-4">
           <strong>Website:</strong> 
-          <a href="https://www.eusens.com" target="_blank" className="text-blue-500 underline">
-          www.eusens.com
+          <a href="https://www.newsinoenergy.com" target="_blank" className="text-blue-500 underline">
+          www.newsinoenergy.com
           </a>
         </p>
         <p className="mb-4">
