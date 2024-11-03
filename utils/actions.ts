@@ -181,9 +181,13 @@ export const fetchProperties = async ({
       country: true,
       image: true,
       price: true,
+      createdAt: true, // Include createdAt if you want to use it for ordering
     },
     skip: (page - 1) * perPage, // Skip the number of items based on the current page
     take: perPage, // Limit the number of items fetched
+    orderBy: {
+      createdAt: 'desc', // Sort by createdAt in descending order
+    },
   });
   return properties;
 };
