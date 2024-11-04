@@ -44,7 +44,7 @@ export default function Footer() {
 
           {/* Copyright Message */}
           <div className="text-center text-gray-600 dark:text-gray-400">
-            © {new Date().getFullYear()} Company Name. All Rights Reserved.
+            © {new Date().getFullYear()} Newsino Energy Company. All Rights Reserved.
             <p>
                We Supply Store sells factory new and new surplus products. This website
                is not sanctioned or approved by any manufacturer or trade name listed. We
