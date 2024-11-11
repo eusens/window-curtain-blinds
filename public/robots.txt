@@ -1,9 +1,7 @@
-//robots.txt
-
-# Block all crawlers for /accounts
+# Block all crawlers from accessing the /accounts directory
 User-agent: *
 Disallow: /accounts
 
-# Allow all crawlers
+# Allow all other content
 User-agent: *
 Allow: /
