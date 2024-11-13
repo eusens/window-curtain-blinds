@@ -5,3 +5,5 @@ Disallow: /accounts
 # Allow all other content
 User-agent: *
 Allow: /
+sitemap:https://www.newsinoenergy.com/sitemap
+
