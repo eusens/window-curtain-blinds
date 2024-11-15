@@ -24,6 +24,7 @@
     "@shadcn/ui": "^0.0.4",
     "@supabase/supabase-js": "^2.45.4",
     "@types/nodemailer": "^6.4.16",
+    "@vercel/analytics": "^1.4.0",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.1",
     "date-fns": "^3.6.0",
