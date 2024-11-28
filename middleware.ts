@@ -9,10 +9,15 @@ const isProtectedRoute = createRouteMatcher([
   '/reviews(.*)',
 ]);
 
+// All other routes including '/', '/about', '/contact', '/properties', etc. will be public by default
 export default clerkMiddleware((auth, req) => {
   if (isProtectedRoute(req)) auth().protect();
 });
 
 export const config = {
-  matcher: ['/((?!.*\\..*|_next).*)', '/', '/(api|trpc)(.*)'],
+  matcher: [
+    '/((?!.+\\.[\\w]+$|_next).*)', // all files except static files
+    '/',                           // root
+    '/(api|trpc)(.*)'             // api routes
+  ],
 };

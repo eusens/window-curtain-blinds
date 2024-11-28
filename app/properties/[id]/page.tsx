@@ -14,7 +14,6 @@ import dynamic from 'next/dynamic';
 import { Skeleton } from '@/components/ui/skeleton';
 import ContactAction from '@/components/contact/ContactAction';
 import { formatCurrency } from '@/utils/format';
-import Head from 'next/head';
 import { Metadata } from 'next';
 
 const DynamicMap = dynamic(
@@ -36,7 +35,16 @@ export async function generateMetadata({ params }: { params: { id: string } }): 
       title: property.name,
       description: `${property.category} - ${property.name}`,
       images: [property.image],
+      type: 'website',  // Changed from 'product' to 'website'
     },
+    alternates: {
+      canonical: `/properties/${params.id}`,
+    },
+    robots: {
+      index: true,
+      follow: true,
+    },
+    keywords: [property.category, property.name, 'industrial automation', 'components'],
   };
 }
 
@@ -50,9 +58,6 @@ async function PropertyDetailsPage({ params }: { params: { id: string } }) {
 
   return (
     <section>
-      <Head>
-        <meta name="robots" content="index,follow" />
-      </Head>
       <BreadCrumbs name={property.name} />
       <header className='flex justify-between items-center mt-4'>
         <h1 className='text-4xl font-bold '>{property.tagline}</h1>

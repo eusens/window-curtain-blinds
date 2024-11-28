@@ -1,6 +1,15 @@
 import { Component, FC } from 'react';
 import ContactAction from '@/components/contact/ContactAction'
 import Image from 'next/image';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'About Us',
+  description: 'Industrial automation components supplier - New and surplus components for industrial and marine automation',
+  alternates: {
+    canonical: 'https://newsinoenergy.com/about',
+  }
+};
 
 const AboutUs: FC = () => {
   return (
