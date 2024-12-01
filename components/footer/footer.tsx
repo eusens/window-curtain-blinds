@@ -52,6 +52,15 @@ export default function Footer() {
                manufacturers. Brand names, brands, and designated trademarks appearing
                herein are the property of their respective owners.
              </p>
+             <p>powered by <a 
+                              href="https://eusens.com" 
+  target="_blank" 
+  rel="noopener noreferrer"
+  className="hover:text-gray-600 transition-colors"
+                           >
+                             Eusens Technology
+                           </a>
+              </p>
           </div>
         </div>
       </div>
